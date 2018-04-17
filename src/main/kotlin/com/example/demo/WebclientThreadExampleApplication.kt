@@ -1,6 +1,7 @@
 package com.example.demo
 
 import org.springframework.boot.CommandLineRunner
+import org.springframework.boot.WebApplicationType
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
@@ -15,7 +16,9 @@ class WebclientThreadExampleApplication {
 }
 
 fun main(args: Array<String>) {
-    runApplication<WebclientThreadExampleApplication>(*args)
+    runApplication<WebclientThreadExampleApplication>(*args) {
+        webApplicationType = WebApplicationType.NONE
+    }
 }
 
 
